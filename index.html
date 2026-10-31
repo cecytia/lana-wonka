@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lana Wonka | Salón de Uñas & Belleza</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <!-- Fuentes e Íconos -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Translúcido -->
+    <header class="header" id="mainHeader">
+        <div class="logo-container">
+            <img src="img/logo.png" alt="Lana Wonka Logo" class="logo-img logo-animated">
+        </div>
+        <nav class="nav-menu">
+            <a href="#inicio" class="active">Inicio</a>
+            <a href="#bienvenida">Bienvenida</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#estudio-nailart">Probador Nail Art</a>
+            <a href="#galeria">Galería</a>
+            <a href="#precios">Precios</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+        <div class="header-right">
+            <a href="#contacto" class="btn-primary">Reservar Cita</a>
+            <button class="icon-btn"><i class="fa-regular fa-comment-dots"></i></button>
+        </div>
+    </header>
+
+    <!-- 1. CARRUSEL PRINCIPAL -->
+    <section id="inicio" class="hero-carousel">
+        <div class="carousel-slide active">
+            <img src="img/unias.jpg" alt="Uñas Lana Wonka" class="slide-img">
+            <div class="hero-overlay">
+                <span class="badge">NUESTRA ESPECIALIDAD</span>
+                <h1>Uñas Perfectas para Cada Ocasión</h1>
+                <p>Gelish, Rubber Base y Extensiones de Acrílico con acabados sencillos y elegantes.</p>
+                <a href="#servicios" class="btn-main">Ver Catálogo de Uñas</a>
+            </div>
+        </div>
+        <div class="carousel-slide">
+            <img src="img/pestanas.jpg" alt="Pestañas Lana Wonka" class="slide-img">
+            <div class="hero-overlay">
+                <span class="badge">EFECTOS Y VOLUMEN</span>
+                <h1>Miradas Impactantes y Naturales</h1>
+                <p>Técnicas Clásica, 3D, Rímel, Wispy, Efecto Mojado y Volumen Americano.</p>
+                <a href="#servicios" class="btn-main">Ver Opciones de Pestañas</a>
+            </div>
+        </div>
+        <div class="carousel-slide">
+            <img src="img/cejas.jpg" alt="Cejas Lana Wonka" class="slide-img">
+            <div class="hero-overlay">
+                <span class="badge">CUIDADO FACIAL</span>
+                <h1>Diseño y Estilismo de Cejas</h1>
+                <p>Planchado de cejas, Depilación con Cera y Henna para resaltar la belleza de tu rostro.</p>
+                <a href="#servicios" class="btn-main">Ver Servicios de Cejas</a>
+            </div>
+        </div>
+        <button class="prev-btn" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next-btn" onclick="moveSlide(1)">&#10095;</button>
+        <div class="carousel-dots">
+            <span class="dot-item active" onclick="currentSlide(0)"></span>
+            <span class="dot-item" onclick="currentSlide(1)"></span>
+            <span class="dot-item" onclick="currentSlide(2)"></span>
+        </div>
+    </section>
+
+    <!-- 2. BIENVENIDA A LANA WONKA -->
+    <section id="bienvenida" class="section bienvenida-section">
+        <div class="container grid-two-cols">
+            <div class="bienvenida-text">
+                <span class="section-label">BIENVENIDA A LANA WONKA</span>
+                <h2 class="serif-title">Tu espacio de belleza y relajación</h2>
+                <p class="desc-p">En Lana Wonka, nos apasiona resaltar la comodidad de tu hogar y tu belleza natural. No somos solo un estudio de uñas: somos un refugio donde el arte y el cuidado personal se encuentran para ofrecerte una experiencia única.</p>
+                
+                <div class="features-dual">
+                    <div class="feat-col">
+                        <h4>Calidad</h4>
+                        <p>Productos premium para resultados duraderos.</p>
+                    </div>
+                    <div class="feat-divider"></div>
+                    <div class="feat-col">
+                        <h4>Pasión</h4>
+                        <p>Cada detalle cuenta para nosotras.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bienvenida-card-img">
+                <div class="img-wrapper-rounded">
+                    <img src="img/salon.png" alt="Lana Wonka Salon">
+                    <div class="card-floating-tag">
+                        <div>
+                            <h4>Experiencia Lana Wonka</h4>
+                            <p>Iztacalco, CDMX • Martes a Sábado</p>
+                        </div>
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. NUESTROS SERVICIOS -->
+    <section id="servicios" class="section servicios-section">
+        <div class="container text-center">
+            <span class="section-label">NUESTROS SERVICIOS</span>
+            <h2 class="serif-title">Todo lo que tus uñas necesitan</h2>
+            <p class="section-subtext">Servicios profesionales realizados por expertas en el cuidado de manos y pies.</p>
+
+            <div class="grid-four-cards">
+                <div class="card-service-box">
+                    <div class="dark-icon-circle"><i class="fa-solid fa-paint-brush"></i></div>
+                    <h3>Manicure</h3>
+                    <p>Cuidado completo de manos y cutículas con esmaltado tradicional o en gel.</p>
+                    <a href="#contacto" class="link-more">Ver más &rarr;</a>
+                </div>
+                <div class="card-service-box">
+                    <div class="dark-icon-circle"><i class="fa-solid fa-droplet"></i></div>
+                    <h3>Pedicure</h3>
+                    <p>Tratamiento relajante para pies con exfoliación, hidratación y esmaltado.</p>
+                    <a href="#contacto" class="link-more">Ver más &rarr;</a>
+                </div>
+                <div class="card-service-box">
+                    <div class="dark-icon-circle"><i class="fa-solid fa-gem"></i></div>
+                    <h3>Uñas Acrílicas</h3>
+                    <p>Extensiones de uñas resistentes y duraderas con acabado natural o llamativo.</p>
+                    <a href="#contacto" class="link-more">Ver más &rarr;</a>
+                </div>
+                <div class="card-service-box">
+                    <div class="dark-icon-circle"><i class="fa-solid fa-palette"></i></div>
+                    <h3>Nail Art</h3>
+                    <p>Diseños personalizados, pedrería y decoraciones únicas para cada estilo.</p>
+                    <a href="#contacto" class="link-more">Ver más &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Banner de Tarifas Base -->
+            <div class="tarifas-base-banner">
+                <div class="left-info">
+                    <div class="tag-icon-pink"><i class="fa-solid fa-tag"></i></div>
+                    <div class="text">
+                        <h4>Tarifas Base de Uñas</h4>
+                        <p>Los precios son por 1 solo tono, puedes cotizar tu diseño personalizado con nosotras.</p>
+                    </div>
+                </div>
+                <div class="right-badges">
+                    <div class="price-chip"><span>GELISH</span><strong>$100</strong></div>
+                    <div class="price-chip"><span>RUBBER</span><strong>$250</strong></div>
+                    <div class="price-chip"><span>EXTENSIÓN UÑAS</span><strong>$300</strong></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. ESTUDIO PROBADOR NAIL ART INTERACTIVO Y COMPLETO -->
+    <section id="estudio-nailart" class="section ar-tech-section">
+        <div class="container text-center">
+            <span class="section-label">ESTUDIO DE DISEÑO NAIL ART</span>
+            <h2 class="serif-title">Diseña tu Uña en Tiempo Real</h2>
+            <p class="desc-p">Selecciona forma, colores, efectos Ombré/Degradados y haz clic directo sobre la uña para colocar piedras, diamantes y accesorios a tu gusto.</p>
+
+            <div class="nail-studio-wrapper">
+                <!-- Lienzo con Dedo Realista y Uña -->
+                <div class="canvas-studio-box">
+                    <canvas id="nailStudioCanvas" width="450" height="420"></canvas>
+                    <div class="canvas-hint"><i class="fa-solid fa-hand-pointer"></i> Haz clic sobre la uña para colocar decoraciones</div>
+                </div>
+
+                <!-- Panel de Herramientas de Diseño -->
+                <div class="controls-studio-box">
+                    
+                    <!-- 1. Forma de Uña -->
+                    <div class="control-block">
+                        <label><i class="fa-solid fa-scissors"></i> Forma de la Uña:</label>
+                        <div class="btn-group-studio">
+                            <button class="btn-st active" onclick="setStudioShape('almendra', event)">Almendra</button>
+                            <button class="btn-st" onclick="setStudioShape('cuadrada', event)">Cuadrada</button>
+                            <button class="btn-st" onclick="setStudioShape('stiletto', event)">Stiletto</button>
+                            <button class="btn-st" onclick="setStudioShape('coffin', event)">Coffin</button>
+                        </div>
+                    </div>
+
+                    <!-- 2. Paleta de Colores Base -->
+                    <div class="control-block">
+                        <label><i class="fa-solid fa-palette"></i> Color Base (Esmalte / Gelish):</label>
+                        <div class="color-palette-grid">
+                            <span class="color-swatch active" style="background: #ffb7c5;" title="Rosa Pastel" onclick="setStudioColor('#ffb7c5', event)"></span>
+                            <span class="color-swatch" style="background: #e2738a;" title="Fucsia Lana Wonka" onclick="setStudioColor('#e2738a', event)"></span>
+                            <span class="color-swatch" style="background: #ffffff; border: 1px solid #ccc;" title="Blanco Lechoso" onclick="setStudioColor('#ffffff', event)"></span>
+                            <span class="color-swatch" style="background: #222222;" title="Negro Glossy" onclick="setStudioColor('#222222', event)"></span>
+                            <span class="color-swatch" style="background: #c8e6c9;" title="Verde Menta" onclick="setStudioColor('#c8e6c9', event)"></span>
+                            <span class="color-swatch" style="background: #e0aaff;" title="Lila Pastel" onclick="setStudioColor('#e0aaff', event)"></span>
+                            <span class="color-swatch" style="background: #ffd1dc;" title="Nude Rosado" onclick="setStudioColor('#ffd1dc', event)"></span>
+                            <span class="color-swatch" style="background: #ffd700;" title="Dorado Metal" onclick="setStudioColor('#ffd700', event)"></span>
+                            <input type="color" id="customColorPicker" value="#ffb7c5" onchange="setStudioColor(this.value)" title="Color Personalizado">
+                        </div>
+                    </div>
+
+                    <!-- 3. Efectos y Degradados (Ombré / French) -->
+                    <div class="control-block">
+                        <label><i class="fa-solid fa-wand-magic-sparkles"></i> Efectos & Degradados:</label>
+                        <div class="btn-group-studio">
+                            <button class="btn-st active" onclick="setStudioEffect('solido', event)">Sólido</button>
+                            <button class="btn-st" onclick="setStudioEffect('french', event)">French Punta Blanca</button>
+                            <button class="btn-st" onclick="setStudioEffect('ombre', event)">Ombré / Baby Boomer</button>
+                            <button class="btn-st" onclick="setStudioEffect('glitter', event)">Chispa de Glitter</button>
+                        </div>
+                    </div>
+
+                    <!-- 4. Selección de Pedrería y Decoraciones -->
+                    <div class="control-block">
+                        <label><i class="fa-solid fa-gem"></i> Elige Piedra para Colocar en la Uña:</label>
+                        <div class="gems-selector-grid">
+                            <button class="gem-select-btn active" onclick="selectGemType('diamante', event)">
+                                <span>💎</span> Diamante Cristal
+                            </button>
+                            <button class="gem-select-btn" onclick="selectGemType('perla', event)">
+                                <span>⚪</span> Perla Nácar
+                            </button>
+                            <button class="gem-select-btn" onclick="selectGemType('corazon', event)">
+                                <span>🩷</span> Cristal Corazón
+                            </button>
+                            <button class="gem-select-btn" onclick="selectGemType('estrella', event)">
+                                <span>⭐</span> Estrella Dorada
+                            </button>
+                            <button class="gem-select-btn" onclick="selectGemType('aro', event)">
+                                <span>⭕</span> Aro Metalico
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Botones de Acción -->
+                    <div class="studio-actions">
+                        <button class="btn-clear" onclick="clearGems()"><i class="fa-solid fa-trash"></i> Borrar Piedras</button>
+                        <a href="#contacto" class="btn-dark-submit" style="text-decoration: none; text-align: center;"><i class="fa-solid fa-paper-plane"></i> Cotizar Mi Diseño</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. GALERÍA - NUESTROS TRABAJOS -->
+    <section id="galeria" class="section galeria-section">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-label">GALERÍA</span>
+                <h2 class="serif-title">Nuestros Trabajos</h2>
+            </div>
+
+            <!-- Colección de Uñas -->
+            <div class="galeria-block">
+                <div class="block-header">
+                    <h3><span class="pink-line">|</span> Colección de Uñas <span class="sub-badge">NAIL ART & TENDENCIAS</span></h3>
+                    <div class="arrow-btns">
+                        <button onclick="scrollGrid('gridUnias', -300)">&lt;</button>
+                        <button onclick="scrollGrid('gridUnias', 300)">&gt;</button>
+                    </div>
+                </div>
+                <div class="cards-scroll-wrapper" id="gridUnias">
+                    <div class="galeria-card">
+                        <div class="card-img-box"><img src="img/unias1.png" alt="Black Stiletto"><span class="top-tag">Nail Art Avant-Garde</span></div>
+                        <div class="card-body">
+                            <h4>Black Stiletto 3D Glow <span class="price">$420</span></h4>
+                            <p>Relieve texturizado con microesculturas de ojos neón en base mate y brillo localizado.</p>
+                            <span class="chip-tech">Diseño exclusivo</span>
+                        </div>
+                    </div>
+                    <div class="galeria-card">
+                        <div class="card-img-box"><img src="img/unias2.png" alt="Chrome Silver"><span class="top-tag">Lana Wonka Original</span></div>
+                        <div class="card-body">
+                            <h4>Chrome Silver & Pedrería <span class="price">$300</span></h4>
+                            <p>Esmaltado en gel con acabado cromo plateado, remolinos fucsia y perlas encapsuladas.</p>
+                            <span class="chip-tech">Base Rubber</span>
+                        </div>
+                    </div>
+                    <div class="galeria-card">
+                        <div class="card-img-box"><img src="img/unias3.png" alt="Efecto Gel Rosa"><span class="top-tag">Rubber & Fucsia VIP</span></div>
+                        <div class="card-body">
+                            <h4>Efecto Gel Rosa & Aros <span class="price">$350</span></h4>
+                            <p>Uña esculpida con base rubber reforzada, remolinos fucsia vibrante y aro dorado.</p>
+                            <span class="chip-tech">Gelish $100</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Diseños de Pestañas & Mirada -->
+            <div class="galeria-block">
+                <div class="block-header">
+                    <h3><span class="pink-line">|</span> Diseños de Pestañas & Mirada <span class="sub-badge">1D A 6D & VOLÚMENES</span></h3>
+                    <div class="arrow-btns">
+                        <button onclick="scrollGrid('gridPestanas', -300)">&lt;</button>
+                        <button onclick="scrollGrid('gridPestanas', 300)">&gt;</button>
+                    </div>
+                </div>
+                <div class="cards-scroll-wrapper" id="gridPestanas">
+                    <div class="galeria-card">
+                        <div class="card-img-box"><img src="img/pestanas1.jpg" alt="Efecto Mojado"><span class="top-tag">Tendencia #1</span></div>
+                        <div class="card-body">
+                            <h4>Efecto Mojado / Clásica <span class="price">$500 - $600</span></h4>
+                            <p>Efecto húmedo brillante y espigado que resalta la mirada con elegancia natural sin saturar el párpado.</p>
+                            <div class="mini-prices"><span>Clásica: $500</span><span>Rímel: $550</span><span>2D/3D: $550</span></div>
+                        </div>
+                    </div>
+                    <div class="galeria-card">
+                        <div class="card-img-box"><img src="img/pestanas2.webp" alt="Híbridas"><span class="top-tag">Kim K Look</span></div>
+                        <div class="card-body">
+                            <h4>Híbridas, Wispy & Americano <span class="price">$700 - $800</span></h4>
+                            <p>Mezcla de técnicas clásicas con espigas de volumen que otorgan textura esponjosa y mirada rasgada.</p>
+                            <div class="mini-prices"><span>Híbridas: $700</span><span>Wispy: $750</span><span>Vol. Americano: $800</span></div>
+                        </div>
+                    </div>
+                    <div class="galeria-card text-list-card">
+                        <span class="mini-badge-pink">Cejas & Lifting</span>
+                        <h4>Tratamientos Cejas & Mirada</h4>
+                        <ul class="simple-price-list">
+                            <li><span>Rizado de pestañas</span> <strong>$250</strong></li>
+                            <li><span>Planchado de cejas</span> <strong>$150</strong></li>
+                            <li><span>Henna en cejas</span> <strong>$200</strong></li>
+                            <li><span>Depilación con cera</span> <strong>$100</strong></li>
+                        </ul>
+                        <a href="#contacto" class="btn-soft-pink">Agendar Tratamiento</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Estilismo, Cabello y Faciales -->
+            <div class="galeria-block">
+                <div class="block-header">
+                    <h3><span class="pink-line">|</span> Estilismo, Cabello y Faciales <span class="sub-badge">ALISADOS • TRENZAS • SPA</span></h3>
+                    <div class="arrow-btns">
+                        <button onclick="scrollGrid('gridCabello', -300)">&lt;</button>
+                        <button onclick="scrollGrid('gridCabello', 300)">&gt;</button>
+                    </div>
+                </div>
+                <div class="cards-scroll-wrapper" id="gridCabello">
+                    <div class="galeria-card">
+                        <div class="card-img-box"><img src="img/alisado.png" alt="Alisado Keratina"><span class="top-tag">Alisado 77 Keratina</span></div>
+                        <div class="card-body">
+                            <h4>Alisado 77 Keratina <span class="price">$1,300 - $2,100</span></h4>
+                            <p>Tratamiento intensivo antifrizz y reconstrucción capilar según el largo de tu cabello.</p>
+                            <div class="mini-prices">
+                                <span>Corto: $1,300</span>
+                                <span>Medio: $1,600</span>
+                                <span>Largo: $1,800</span>
+                                <span>Extra Largo: $2,100</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="galeria-card">
+                        <div class="card-img-box"><img src="img/peinado.jpg" alt="Peinados y Trenzado"><span class="top-tag">Texturas & Ondas</span></div>
+                        <div class="card-body">
+                            <h4>Peinados & Trenzado Fashion <span class="price">desde $250</span></h4>
+                            <p>Peinados creativos, trenzas combinadas con ondas playeras y toques de color fantasía.</p>
+                            <span class="chip-tech">&scissors; Corte: $180 • Peinado: $250+</span>
+                        </div>
+                    </div>
+                    <div class="galeria-card">
+                        <div class="card-img-box"><img src="img/trenzas.webp" alt="Trenzas Africanas"><span class="top-tag">Trenzas Africanas</span></div>
+                        <div class="card-body">
+                            <h4>Trenzas Africanas Profesionales <span class="price">desde $1,000</span></h4>
+                            <p>Especialistas en trenzado firme, pulido e indoloro con kanekalon o cabello natural de máxima resistencia.</p>
+                            <span class="chip-tech">Depende del largo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. VIAJE VIRTUAL 360° -->
+    <section id="tour360" class="section tour-dark-section">
+        <div class="container grid-two-cols align-center">
+            <div class="tour-text">
+                <h2 class="serif-title-white">VIAJE VIRTUAL 360°</h2>
+                <p>Conoce nuestras instalaciones desde la comodidad de tu hogar. Recorre cada rincón de nuestro estudio y déjate enamorar por el ambiente rosa de Lana Wonka.</p>
+                <button class="btn-outline-white" onclick="document.getElementById('tourIframe').scrollIntoView();">INICIAR RECORRIDO</button>
+            </div>
+            <div class="tour-viewer-frame" style="height: 320px; padding: 0; overflow: hidden;">
+                <iframe 
+                    id="tourIframe"
+                    src="https://panoramagenerator.com/embed/4T64V8tZn7" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0; border-radius: 20px;" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. PRECIOS Y PAQUETES -->
+    <section id="precios" class="section paquetes-section">
+        <div class="container text-center">
+            <span class="section-label">PRECIOS</span>
+            <h2 class="serif-title">Paquetes para ti</h2>
+            <p class="section-subtext">Elige el paquete que mejor se adapte a tus necesidades.</p>
+
+            <div class="grid-three-plans">
+                <div class="plan-card">
+                    <h3>Básico</h3>
+                    <div class="plan-price">$250 <span>MXN</span></div>
+                    <ul class="plan-features">
+                        <li><i class="fa-solid fa-check"></i> Manicure clásico</li>
+                        <li><i class="fa-solid fa-check"></i> Esmaltado simple</li>
+                        <li><i class="fa-solid fa-check"></i> Limado y cutícula</li>
+                    </ul>
+                    <a href="#contacto" class="btn-plan-outline">Elegir Plan</a>
+                </div>
+
+                <div class="plan-card popular-plan">
+                    <span class="pop-tag">MÁS POPULAR</span>
+                    <h3>Premium</h3>
+                    <div class="plan-price">$450 <span>MXN</span></div>
+                    <ul class="plan-features">
+                        <li><i class="fa-solid fa-check"></i> Manicure + Pedicure</li>
+                        <li><i class="fa-solid fa-check"></i> Esmaltado en gel</li>
+                        <li><i class="fa-solid fa-check"></i> Exfoliación e hidratación</li>
+                        <li><i class="fa-solid fa-check"></i> Diseño sencillo incluido</li>
+                    </ul>
+                    <a href="#contacto" class="btn-plan-dark">Elegir Plan</a>
+                </div>
+
+                <div class="plan-card">
+                    <h3>Deluxe</h3>
+                    <div class="plan-price">$700 <span>MXN</span></div>
+                    <ul class="plan-features">
+                        <li><i class="fa-solid fa-check"></i> Uñas acrílicas o gel</li>
+                        <li><i class="fa-solid fa-check"></i> Nail art personalizado</li>
+                        <li><i class="fa-solid fa-check"></i> Pedicure spa completo</li>
+                        <li><i class="fa-solid fa-check"></i> Pedrería y decoraciones</li>
+                    </ul>
+                    <a href="#contacto" class="btn-plan-outline">Elegir Plan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. TESTIMONIOS -->
+    <section class="section testimonios-section">
+        <div class="container text-center">
+            <span class="section-label">TESTIMONIOS</span>
+            <h2 class="serif-title">Lo que dicen nuestras clientas</h2>
+
+            <div class="grid-three-reviews">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Excelente atención y mis uñas duraron perfectas por semanas. Totalmente recomendado."</p>
+                    <div class="user-info">
+                        <span class="avatar-circle">AM</span>
+                        <div><strong>Ana Martínez</strong><small>Cliente frecuente</small></div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"El nail art quedó increíble, superó mis expectativas. El lugar es muy limpio y acogedor."</p>
+                    <div class="user-info">
+                        <span class="avatar-circle">LF</span>
+                        <div><strong>Lucía Fernández</strong><small>Cliente nueva</small></div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★☆</div>
+                    <p>"Muy buen servicio y precios justos. Ya tengo mi próxima cita agendada."</p>
+                    <div class="user-info">
+                        <span class="avatar-circle">CR</span>
+                        <div><strong>Camila Rojas</strong><small>Cliente frecuente</small></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. FORMULARIO DE RESERVA Y MAPA INTERACTIVO -->
+    <section id="contacto" class="section contacto-section">
+        <div class="container grid-two-cols">
+            <div class="form-side">
+                <span class="section-label">CONTACTO</span>
+                <h2 class="serif-title">Reserva tu cita</h2>
+                <form id="appointmentForm">
+                    <div class="form-row">
+                        <div class="f-group">
+                            <label>NOMBRE COMPLETO</label>
+                            <input type="text" id="nombre" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="f-group">
+                            <label>CORREO ELECTRÓNICO</label>
+                            <input type="email" id="correo" placeholder="correo@ejemplo.com" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="f-group">
+                            <label>TELÉFONO / WHATSAPP</label>
+                            <input type="tel" id="telefono" value="5630926271" required>
+                        </div>
+                        <div class="f-group">
+                            <label>SELECCIONA UN SERVICIO</label>
+                            <select id="servicio">
+                                <option value="Gelish Base ($100)">Gelish Base ($100)</option>
+                                <option value="Rubber Base ($250)">Rubber Base ($250)</option>
+                                <option value="Extensión de Uñas ($300)">Extensión de Uñas ($300)</option>
+                                <option value="Pestañas Clásicas ($500)">Pestañas Clásicas ($500)</option>
+                                <option value="Pestañas 3D / Rímel ($550)">Pestañas 3D / Rímel ($550)</option>
+                                <option value="Alisado Keratina Corto ($1,300)">Alisado Keratina Corto ($1,300)</option>
+                                <option value="Alisado Keratina Medio ($1,600)">Alisado Keratina Medio ($1,600)</option>
+                                <option value="Alisado Keratina Largo ($1,800)">Alisado Keratina Largo ($1,800)</option>
+                                <option value="Alisado Keratina Extra Largo ($2,100)">Alisado Keratina Extra Largo ($2,100)</option>
+                                <option value="Corte de Cabello ($180)">Corte de Cabello ($180)</option>
+                                <option value="Peinado Especial ($250+)">Peinado Especial (desde $250)</option>
+                                <option value="Base ($800+)">Base (desde $800)</option>
+                                <option value="Trenzas Africanas ($1,000+)">Trenzas Africanas (desde $1,000)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="f-group">
+                        <label>DETALLES O DISEÑO DESEADO</label>
+                        <textarea id="notas" placeholder="Escribe aquí si requieres algún diseño en especial o fecha tentativa..."></textarea>
+                    </div>
+                    <button type="button" onclick="sendWhatsApp()" class="btn-dark-submit">Enviar Solicitud</button>
+                </form>
+            </div>
+
+            <div class="map-card-side">
+                <div class="map-embed-box">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.504289874591!2d-99.1021404!3d19.3905872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fe090b8f0a0d%3A0x6b4bf2b220456100!2sAv.%20T%C3%A9%20%26%20Bramadero%2C%20Ramos%20Mill%C3%A1n%2C%20Iztacalco%2C%20CDMX!5e0!3m2!1ses!2smx!4v1700000000000!5m2!1ses!2smx" 
+                        width="100%" 
+                        height="200" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <div class="location-details-box">
+                    <div class="info-item">
+                        <i class="fa-solid fa-location-dot pink-icon"></i>
+                        <div>
+                            <strong>Dirección Oficial</strong>
+                            <p>Av. Té, Bramadero, Ramos Millán, Iztacalco, 08000, CDMX</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-regular fa-clock pink-icon"></i>
+                        <div>
+                            <strong>Horario de Atención</strong>
+                            <p>11:00 a.m. a 7:00 p.m. • Martes a Sábado</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-regular fa-comments pink-icon"></i>
+                        <div>
+                            <strong>Atención Directa</strong>
+                            <p>WhatsApp: +52 56 3092 6271 | Instagram: @LANA_WONKA</p>
+                            <a href="https://api.whatsapp.com/send?phone=525630926271&text=Hola%20Lana%20Wonka" target="_blank" class="direct-link">Enviar mensaje directo por WhatsApp &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. FOOTER CON REDES SOCIALES OFICIALES -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <img src="img/logo.png" alt="Lana Wonka" class="footer-logo">
+                <p>Salón de Uñas, Pestañas y Estética Femenina en CDMX.</p>
+                <p><i class="fa-solid fa-location-dot"></i> Av. Té, Bramadero, Ramos Millán, Iztacalco, CDMX</p>
+                <p><i class="fa-regular fa-clock"></i> Martes a Sábado de 11:00 a.m. a 7:00 p.m.</p>
+            </div>
+            
+            <div class="footer-support">
+                <h3><i class="fa-solid fa-headset"></i> Asistencia Telefónica</h3>
+                <p class="phone-number">+52 56 3092 6271</p>
+                <a href="https://api.whatsapp.com/send?phone=525630926271&text=Hola%20Lana%20Wonka,%20quisiera%20agendar%20una%20cita" target="_blank" class="btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> Reservar por WhatsApp
+                </a>
+                <div class="social-links-direct">
+                    <h4>Síguenos en Redes:</h4>
+                    <div class="social-buttons">
+                        <a href="https://www.facebook.com/people/Lana-Nails/61576335765783/?ref=PROFILE_EDIT_xav_ig_profile_page_web#" target="_blank" class="social-icon fb">
+                            <i class="fa-brands fa-facebook-f"></i> lana nails
+                        </a>
+                        <a href="https://www.instagram.com/lana_wonka" target="_blank" class="social-icon ig">
+                            <i class="fa-brands fa-instagram"></i> @Lana Wonka
+                        </a>
+                        <a href="https://www.tiktok.com/@lana_wonka" target="_blank" class="social-icon tt">
+                            <i class="fa-brands fa-tiktok"></i> @Lana Wonka
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Lana Wonka. Proyecto de Diseño de Interfaces de Usuario - UPIICSA IPN.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
